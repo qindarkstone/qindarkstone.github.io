@@ -80,7 +80,7 @@
 		</a>
 	</div>
 	<div class="kira-count">
-		<div><span>文章</span>50</div>
+		<div><span>文章</span>51</div>
 		<div><span>标签</span>7</div>
 		<div><span>分类</span>20</div>
 	</div>
@@ -233,7 +233,7 @@
             <a class="category-list-link" href="/categories/408/">
               408
             </a>
-            <span class="category-list-count">42</span>
+            <span class="category-list-count">43</span>
           </li>
         
           <li class="category-list-item">
@@ -282,7 +282,7 @@
             <a class="category-list-link" href="/categories/408/操作系统/">
               操作系统
             </a>
-            <span class="category-list-count">5</span>
+            <span class="category-list-count">6</span>
           </li>
         
           <li class="category-list-item">
@@ -359,7 +359,7 @@
             <a class="category-list-link" href="/categories/408/操作系统/进程与线程/">
               进程与线程
             </a>
-            <span class="category-list-count">1</span>
+            <span class="category-list-count">2</span>
           </li>
         
           <li class="category-list-item">
@@ -477,26 +477,31 @@
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 7 分钟</a>
 		</div>
 		<h1><span id="ix2fo方式">I&#x2F;O方式</span></h1><ul>
-<li><p>中断服务程序是处理器处理的紧急事件，可理解为一种服务</p>
-<ul>
-<li>是通过执行事先编好的某个特定的程序来完成的，一般属于操作系统的模块，以供调用执行</li>
+<li><h3><span id="中断">中断</span></h3><ul>
+<li>中断由硬件保护并完成，主要是为了保证系统运行可靠、正确。<ul>
+<li>提高处理速度也是一个好处，但不是主要目的。</li>
 </ul>
 </li>
-<li><h3><span id="中断服务程序在内核态下执行">中断服务程序在内核态下执行</span></h3></li>
-<li><p>区分中断向量和中断向量地址</p>
-<ul>
-<li>中断向量是中断服务程序的入口地址</li>
-<li>中断向量地址是内存中存放中断向量的地址<ul>
+<li>浮点数运算<ul>
+<li>浮点数运算下溢，当作<code>机器零处理</code>，不会引发中断</li>
+<li>浮点数<code>上溢</code>，表示超过浮点数的表示范围，属于<code>内中断</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3><span id="中断服务程序">中断服务程序</span></h3><ul>
+<li><h4><span id="是处理器处理的紧急事件可理解为一种服务">是处理器处理的紧急事件，可理解为一种<code>服务</code></span></h4></li>
+<li><h4><span id="是通过执行事先编好的某个特定的程序来完成的一般属于操作系统的模块以供调用执行">是通过执行事先编好的<code>某个特定的程序</code>来完成的，一般属于操作系统的模块，以供调用执行</span></h4></li>
+<li><h4><span id="中断服务程序在内核态下执行">中断服务程序在<code>内核态</code>下执行</span></h4></li>
+</ul>
+</li>
+<li><h3><span id="区分中断向量和中断向量地址">区分<code>中断向量</code>和<code>中断向量地址</code></span></h3><ul>
+<li><h4><span id="中断向量是中断服务程序的入口地址">中断向量是<code>中断服务程序的入口地址</code></span></h4></li>
+<li><h4><span id="中断向量地址是内存中存放中断向量的地址">中断向量地址是内存中<code>存放中断向量的地址</code></span></h4><ul>
 <li>即终端服务程序入口地址的地址	</li>
 <li>即中断类型号</li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p>浮点数运算</p>
-<ul>
-<li>浮点数运算下溢，当作机器零处理，不会引发中断</li>
-<li>浮点数上溢，表示超过浮点数的表示范围，属于内中断</li>
 </ul>
 </li>
 <li><p>DMA方式不需要CPU干预传送操作，仅在开始和结尾借用CPU一点时间，其余不占用CPU任何资源</p>
@@ -592,7 +597,6 @@
 </li>
 <li><p>PC 的内容是被中断程序尚未执行的第一条指令地址，PSW寄存器保存各种状态信息。CPU 响应中断后，需要保护中断的 CPU现场，将 PC 和 PSW压入堆栈，这样等到中断结束后，就可以将压入堆找的原 PC和 PSW的内容恢复到相应的寄存器，原程序从断点开始继续执行。</p>
 </li>
-<li></li>
 <li><h1><span id="总结">总结</span></h1><ul>
 <li><h3><span id="中断处理方式">中断处理方式</span></h3><ul>
 <li>在 I&#x2F;O设备输入每个数据的过程中，由于无须CPU 干预，因而可使 CPU与 I&#x2F;O 设备并行工作。仅当输完一个数据时，才需 CPU 花费极短的时间去做一些中断处理。</li>
@@ -648,7 +652,7 @@
 				<span>下一章</span>
 				<a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E4%BC%A0%E8%BE%93%E5%B1%82/%E4%BC%A0%E8%BE%93%E5%B1%82%E2%80%94TCP%E5%8D%8F%E8%AE%AE/"> TCP协议</a>
 			</div>
-			                                         
+			                                                
 			<!-- 先找到与当前文字相同的目录 -->
 			                                                                     
 			<!-- 在找到当前文章所在的 index -->
