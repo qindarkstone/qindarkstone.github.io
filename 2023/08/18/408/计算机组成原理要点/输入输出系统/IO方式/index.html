@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> IO方式 -  qindarkstone&#39;s blog</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://i.postimg.cc/KYSjq4wP/favicon.png"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://i.postimg.cc/KzX29JF8/1.png')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="qindarkstone&#39;s blog">
+        <img
+			src="https://i.postimg.cc/KYSjq4wP/favicon.png"
+			alt="Qin darkstone"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://i.postimg.cc/KYSjq4wP/favicon.png" title="Qin darkstone">
+			<img
+				src="https://i.postimg.cc/KYSjq4wP/favicon.png"
+				alt="Qin darkstone"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>50</div>
+		<div><span>标签</span>7</div>
+		<div><span>分类</span>28</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章总览"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章总览
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="打个脚先"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				打个脚先
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1304749747&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/35484399"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/qindarkstone"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://t.me/qindarkstone"
+				target="_blank"
+				mdui-tooltip="{content: 'Telegram'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-team
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/">
+              408
+            </a>
+            <span class="category-list-count">42</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/中央处理器/">
+              中央处理器
+            </a>
+            <span class="category-list-count">6</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/二重积分/">
+              二重积分
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/图/">
+              图
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/多元函数微分学/">
+              多元函数微分学
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/存储系统/">
+              存储系统
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/导数/">
+              导数
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/微分方程/">
+              微分方程
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/总线/">
+              总线
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/指令系统/">
+              指令系统
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/排序/">
+              排序
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/操作系统/">
+              操作系统
+            </a>
+            <span class="category-list-count">5</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/操作系统/操作系统概述/">
+              操作系统概述
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/数据的表示和运算/">
+              数据的表示和运算
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/">
+              数据结构
+            </a>
+            <span class="category-list-count">13</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/无穷级数/">
+              无穷级数
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/极限/">
+              极限
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/查找/">
+              查找
+            </a>
+            <span class="category-list-count">6</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/积分/">
+              积分
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/线性表/">
+              线性表
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/">
+              考研数学
+            </a>
+            <span class="category-list-count">8</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/计算机系统概述/">
+              计算机系统概述
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/">
+              计算机组成原理
+            </a>
+            <span class="category-list-count">23</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机网络/">
+              计算机网络
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/输入输出系统/">
+              输入输出系统
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/操作系统/进程与线程/">
+              进程与线程
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/高数方法论/">
+              高数方法论
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/">
+              高等数学
+            </a>
+            <span class="category-list-count">8</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/408/" style="font-size: 20px;">408</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 12px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16px;">数据结构</a> <a href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">考研数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 18px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">高等数学</a>
+		</div>
+		
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2023
+		<a href="/">Qin darkstone</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+			<a
+				href="https://beian.miit.gov.cn/"
+				target="_blank"
+			>
+				鲁ICP无备******号
+			</a>
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://user-images.githubusercontent.com/81075299/261602472-63683c64-3308-48a3-a3b8-eb680fe0f512.gif"
+				data-sizes="auto"
+				alt="IO方式"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>IO方式</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年08月18日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.9k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 7 分钟</a>
+		</div>
+		<h1><span id="ix2fo方式">I&#x2F;O方式</span></h1><ul>
+<li><p>中断服务程序是处理器处理的紧急事件，可理解为一种服务</p>
+<ul>
+<li>是通过执行事先编好的某个特定的程序来完成的，一般属于操作系统的模块，以供调用执行</li>
+</ul>
+</li>
+<li><h3><span id="中断服务程序在内核态下执行">中断服务程序在内核态下执行</span></h3></li>
+<li><p>区分中断向量和中断向量地址</p>
+<ul>
+<li>中断向量是中断服务程序的入口地址</li>
+<li>中断向量地址是内存中存放中断向量的地址<ul>
+<li>即终端服务程序入口地址的地址	</li>
+<li>即中断类型号</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>浮点数运算</p>
+<ul>
+<li>浮点数运算下溢，当作机器零处理，不会引发中断</li>
+<li>浮点数上溢，表示超过浮点数的表示范围，属于内中断</li>
+</ul>
+</li>
+<li><p>DMA方式不需要CPU干预传送操作，仅在开始和结尾借用CPU一点时间，其余不占用CPU任何资源</p>
+<ul>
+<li>中断方式是程序切换，每次操作需要保护和恢复现场</li>
+</ul>
+</li>
+<li><h3><span id="程序中断过程是由硬件执行的中断隐指令和中断服务程序共同完成的">程序中断过程是由硬件执行的中断隐指令和中断服务程序共同完成的</span></h3></li>
+<li><h3><span id="中断服务程序的最后指令通常是中断返回指令返回原程序的断点处重新执行">中断服务程序的最后指令通常是中断返回指令，返回原程序的断点处重新执行</span></h3><ul>
+<li>与无条件转移指令不同的是，它不仅要修改 PC 值，而且要将 CPU中的所有寄存器都恢复到中断前的状态</li>
+</ul>
+</li>
+<li><h3><span id="周期挪用法">周期挪用法</span></h3><ul>
+<li>准备好一个数据后，由 DMA 控制器立即挪用一个或几个主存周期来访问主存，传送完一个数据字后立即释放总线，是一种单字传送方式</li>
+<li>每个字传送完后 CPU可以访问主存</li>
+</ul>
+</li>
+<li><p>只有具有 DMA 接口的设备才能产生 DMA 请求</p>
+<ul>
+<li>即使当前设备是高速设备或需要与主机批量交换数据，若没有DMA接口的话，也不能产生 DMA 请求。</li>
+</ul>
+</li>
+<li><h3><span id="一般来讲除不可屏蔽中断外机器故障的优先级最高">一般来讲，除不可屏蔽中断外，机器故障的优先级最高</span></h3><ul>
+<li>不可屏蔽中断用于处理紧急和重要的事件<ul>
+<li>如时钟中断，电源掉电等</li>
+</ul>
+</li>
+<li>访管指令也具有较高的优先级<ul>
+<li>访管指令是进入核心态，大多与资源分配有关</li>
+</ul>
+</li>
+<li>重新启动要等待其他任务完成后再进行，所以优先级最低</li>
+</ul>
+</li>
+<li><p>一条指令执行完毕可以响应中断请求，<strong>但他本身不会引起中断请求，不一定会产生中断请求</strong></p>
+</li>
+<li><h3><span id="注意不同部件引起的中断类型不一样">注意不同部件引起的中断类型不一样</span></h3><ul>
+<li>如需要进行输入输出<ul>
+<li>用户程序（是指令发起的，属于内中断）需要输入输出时，是CPU发出中断请求，需要调用操作系统的接口（请求操作系统服务），此时会引起访管中断，系统由用户态转为核心态<ul>
+<li>此处也不是程序性中断，程序性中断是一个程序想要占用CPU资源引起中断，使得另一个程序中断</li>
+</ul>
+</li>
+<li>当外部IO设备主动进行输入输出时，属于I&#x2F;O中断，是I&#x2F;O系统发起的中断请求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>允许中断触发器</p>
+<ul>
+<li>置0表示关中断<ul>
+<li>由关中断指令实现，而关中断指令由中断隐指令完成，即由硬件自动实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>中断屏蔽标志技术的一种作用是实现中断升级，即改变中断处理的次序，因此其可以改变多个中断服务程序执行完的次序。</p>
+<ul>
+<li>注意区分中断响应次序和中断处理次序<ul>
+<li>中断响应次序是由硬件排队电路决定的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三种IO的工作</p>
+<ul>
+<li>程序查询方式中<ul>
+<li>CPU与外设串行工作</li>
+<li>传送与主程序串行工作</li>
+</ul>
+</li>
+<li>中断方式中<ul>
+<li>CPU与外设并行工作</li>
+<li>当数据准备好时需中断主程序以执行数据传送，因此传送与主程序是串行工作</li>
+</ul>
+</li>
+<li>DMA方式中<ul>
+<li>CPU与外设并行工作</li>
+<li>传送与主程序并行工作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3><span id="dma方式是靠硬件电路实现的与程序无关">DMA方式是靠硬件电路实现的，与程序无关</span></h3><ul>
+<li>直接程序传送、程序中断、通道控制都是基本的程序控制方式，需要程序的干预</li>
+</ul>
+</li>
+<li><p>DMA 方式的数据传送不经过 CPU，但需要经过 DMA 控制器中的<strong>数据缓冲寄存器</strong></p>
+</li>
+<li><p>DMA方式中虽然DMA掌握控制权，但请求信号是由外部设备发出的</p>
+<ul>
+<li>一个完整的 DMA 过程主要由 DMA 控制器控制，但也需要 CPU 参与控制，只是 CPU干预比较少，只需在数据传输开始和结束时干预（DMA通过中断方式取得和交还总线控制权），从而提高了CPU的效率。</li>
+</ul>
+</li>
+<li><p>PC 的内容是被中断程序尚未执行的第一条指令地址，PSW寄存器保存各种状态信息。CPU 响应中断后，需要保护中断的 CPU现场，将 PC 和 PSW压入堆栈，这样等到中断结束后，就可以将压入堆找的原 PC和 PSW的内容恢复到相应的寄存器，原程序从断点开始继续执行。</p>
+</li>
+<li></li>
+<li><h1><span id="总结">总结</span></h1><ul>
+<li><h3><span id="中断处理方式">中断处理方式</span></h3><ul>
+<li>在 I&#x2F;O设备输入每个数据的过程中，由于无须CPU 干预，因而可使 CPU与 I&#x2F;O 设备并行工作。仅当输完一个数据时，才需 CPU 花费极短的时间去做一些中断处理。</li>
+<li>因此中断申请使用的是 CPU 处理时间，发生的时间是在一条指令执行结束之后，数据在<strong>软件</strong>的控制下完成传送。（外设与主机之间的数据传送通过软件完成）</li>
+<li>外设准备数据的时间应大于中断处理的时间<ul>
+<li>否则中断处理未结束，外设可能不断传送新数据，导致旧数据被覆盖<ul>
+<li>若外设准备数据的时间小于中断处理时间，则可能导致数据丢失，以输入设备为例，设备为进程准备的数据会先写入设备控制器的缓冲区（<strong>缓冲区大小有限</strong>），缓冲区每写满一次，就会向CPU发出一次中断请求，CPU响应并处理中断的过程，就是将缓冲区的数据取走的过程。</li>
+<li>因此若外设准备数据的时间小于中断处理时间，则可能导致外设往缓冲区写入数据的速度快于CPU从缓冲区取走数据的速度，从而导致缓冲区的数据被覆盖，进而导致数据丢失。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3><span id="dma-方式">DMA 方式</span></h3><ul>
+<li>数据传输的基本单位是数据块，即在 CPU与 I&#x2F;O 设备之间，每次传送至少一个数据块</li>
+<li>DMA方式每次申请的是总线的使用权，所传送的数据是从设备直接送入内存的，或者相反</li>
+<li>仅在传送一个或多个数据块的开始和结束时，才需要 CPU干预，整块数据的传送是在控制器的控制下完成的。</li>
+<li>每类设备都配置一个设备驱动程序，设备驱动程序向上层用户程序提供一组标准接口，负责实现对设备发出各种具体操作指令，用户程序不能直接和DMA 打交道</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>Author：</strong>Qin darkstone<br>
+        <strong>Link：</strong><a href="https://qindarkstone.github.io/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/IO%E6%96%B9%E5%BC%8F/" title="https:&#x2F;&#x2F;qindarkstone.github.io&#x2F;2023&#x2F;08&#x2F;18&#x2F;408&#x2F;计算机组成原理要点&#x2F;输入输出系统&#x2F;IO方式&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;qindarkstone.github.io&#x2F;2023&#x2F;08&#x2F;18&#x2F;408&#x2F;计算机组成原理要点&#x2F;输入输出系统&#x2F;IO方式&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                                                                                                                           
+			<!-- 在找到当前文章所在的 index -->
+			                                                                                                                                                                
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/IO%E6%8E%A5%E5%8F%A3/"> IO接口</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/08/19/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/"> 进程与线程</a>
+			</div>
+			                                                                                  
+			<!-- 先找到与当前文字相同的目录 -->
+			                                                                     
+			<!-- 在找到当前文章所在的 index -->
+			                                                                                        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/IO%E6%8E%A5%E5%8F%A3/"> IO接口</a>
+			</div>
+			                                                                  
+			<!-- 先找到与当前文字相同的目录 -->
+			      
+			<!-- 在找到当前文章所在的 index -->
+			    
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/IO%E6%8E%A5%E5%8F%A3/"> IO接口</a>
+			</div>
+			                                                                                                  
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/408/">408</a><a class="kirafont icon-container-fill -link" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a><a class="kirafont icon-container-fill -link" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/">输入输出系统</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/408/" rel="tag">408</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a>
+		
+	</div>
+	
+		<script src="/js/kira-code-copy.js"></script>
+	
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="qindarkstone/qindarkstone.github.io"
+      data-repo-id="R_kgDOKIiOyg"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOKIiOys4CYsSd"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

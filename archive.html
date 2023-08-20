@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 文章归档 -  qindarkstone&#39;s blog</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://i.postimg.cc/KYSjq4wP/favicon.png"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://i.postimg.cc/KzX29JF8/1.png')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="qindarkstone&#39;s blog">
+        <img
+			src="https://i.postimg.cc/KYSjq4wP/favicon.png"
+			alt="Qin darkstone"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://i.postimg.cc/KYSjq4wP/favicon.png" title="Qin darkstone">
+			<img
+				src="https://i.postimg.cc/KYSjq4wP/favicon.png"
+				alt="Qin darkstone"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>50</div>
+		<div><span>标签</span>7</div>
+		<div><span>分类</span>28</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple true"
+			href="/archive.html"
+			title="文章总览"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章总览
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="打个脚先"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				打个脚先
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1304749747&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/35484399"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/qindarkstone"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://t.me/qindarkstone"
+				target="_blank"
+				mdui-tooltip="{content: 'Telegram'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-team
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/">
+              408
+            </a>
+            <span class="category-list-count">42</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/中央处理器/">
+              中央处理器
+            </a>
+            <span class="category-list-count">6</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/二重积分/">
+              二重积分
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/图/">
+              图
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/多元函数微分学/">
+              多元函数微分学
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/存储系统/">
+              存储系统
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/导数/">
+              导数
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/微分方程/">
+              微分方程
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/总线/">
+              总线
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/指令系统/">
+              指令系统
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/排序/">
+              排序
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/操作系统/">
+              操作系统
+            </a>
+            <span class="category-list-count">5</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/操作系统/操作系统概述/">
+              操作系统概述
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/数据的表示和运算/">
+              数据的表示和运算
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/">
+              数据结构
+            </a>
+            <span class="category-list-count">13</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/无穷级数/">
+              无穷级数
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/极限/">
+              极限
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/查找/">
+              查找
+            </a>
+            <span class="category-list-count">6</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/积分/">
+              积分
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/数据结构/线性表/">
+              线性表
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/">
+              考研数学
+            </a>
+            <span class="category-list-count">8</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/计算机系统概述/">
+              计算机系统概述
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/">
+              计算机组成原理
+            </a>
+            <span class="category-list-count">23</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机网络/">
+              计算机网络
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/计算机组成原理/输入输出系统/">
+              输入输出系统
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/408/操作系统/进程与线程/">
+              进程与线程
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/高数方法论/">
+              高数方法论
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研数学/高等数学/">
+              高等数学
+            </a>
+            <span class="category-list-count">8</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/408/" style="font-size: 20px;">408</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 12px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16px;">数据结构</a> <a href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">考研数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 18px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">高等数学</a>
+		</div>
+		
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2023
+		<a href="/">Qin darkstone</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+			<a
+				href="https://beian.miit.gov.cn/"
+				target="_blank"
+			>
+				鲁ICP无备******号
+			</a>
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					<section class="kira-archives">
+    <div class="tagcloud kira-rainbow">
+        <a class="mdui-ripple -unordered list-link" href="/tags/408/" rel="tag">408<span class="mdui-ripple -unordered list-count">42</span></a><a class="mdui-ripple -unordered list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统<span class="mdui-ripple -unordered list-count">5</span></a><a class="mdui-ripple -unordered list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构<span class="mdui-ripple -unordered list-count">13</span></a><a class="mdui-ripple -unordered list-link" href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" rel="tag">考研数学<span class="mdui-ripple -unordered list-count">8</span></a><a class="mdui-ripple -unordered list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理<span class="mdui-ripple -unordered list-count">23</span></a><a class="mdui-ripple -unordered list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络<span class="mdui-ripple -unordered list-count">1</span></a><a class="mdui-ripple -unordered list-link" href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" rel="tag">高等数学<span class="mdui-ripple -unordered list-count">8</span></a>
+    </div>
+    <div class="categories kira-rainbow-fill">
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg')"></div>
+                <h1>408</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602463-df9558c7-098c-4b32-ac75-7861b813a282.jpg')"></div>
+                <h1>中央处理器</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>二重积分</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602435-c6122bb6-3d29-4760-a97d-6dba42e8a303.jpg')"></div>
+                <h1>图</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>多元函数微分学</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602463-df9558c7-098c-4b32-ac75-7861b813a282.jpg')"></div>
+                <h1>存储系统</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E5%AF%BC%E6%95%B0/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>导数</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>微分方程</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%80%BB%E7%BA%BF/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602479-611b2ec1-fc2b-4bdc-8451-48dee846887b.jpg')"></div>
+                <h1>总线</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602452-0d68e035-4aea-4b51-b809-a84b8c3c6095.jpg')"></div>
+                <h1>指令系统</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602435-c6122bb6-3d29-4760-a97d-6dba42e8a303.jpg')"></div>
+                <h1>排序</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg')"></div>
+                <h1>操作系统</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+                <div class="bg" style="background-image:url('https://i.postimg.cc/Wz5PzHX2/6643905-F9-B0-C0-AC659475-E0-D610-E07-CB06-E668-DDAB34704194-pimgpsh-fullsize-distr.png')"></div>
+                <h1>操作系统概述</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602472-63683c64-3308-48a3-a3b8-eb680fe0f512.gif')"></div>
+                <h1>数据的表示和运算</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602435-c6122bb6-3d29-4760-a97d-6dba42e8a303.jpg')"></div>
+                <h1>数据结构</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>无穷级数</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E6%9E%81%E9%99%90/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>极限</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602464-d791d666-67fc-445d-b44d-b9bb39e1b0d3.jpg')"></div>
+                <h1>查找</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E7%A7%AF%E5%88%86/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>积分</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602435-c6122bb6-3d29-4760-a97d-6dba42e8a303.jpg')"></div>
+                <h1>线性表</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>考研数学</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602472-63683c64-3308-48a3-a3b8-eb680fe0f512.gif')"></div>
+                <h1>计算机系统概述</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602463-df9558c7-098c-4b32-ac75-7861b813a282.jpg')"></div>
+                <h1>计算机组成原理</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602431-dea8bb1c-a299-4deb-89b6-ebd880b00891.jpg')"></div>
+                <h1>计算机网络</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602472-63683c64-3308-48a3-a3b8-eb680fe0f512.gif')"></div>
+                <h1>输入输出系统</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg')"></div>
+                <h1>进程与线程</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E9%AB%98%E6%95%B0%E6%96%B9%E6%B3%95%E8%AE%BA/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>高数方法论</h1>
+            </a>
+        
+            
+            
+                 
+                     
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <a class="mdui-ripple" href="/categories/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">
+                <div class="bg" style="background-image:url('https://user-images.githubusercontent.com/81075299/261602459-4a1c820c-804a-4e63-8e38-76ae0c1ccb15.jpg')"></div>
+                <h1>高等数学</h1>
+            </a>
+        
+    </div>
+    <article>
+        
+        
+            <h2>2023</h2>
+            <ul>
+            
+                <li><span>08-20</span><a href="/2023/08/20/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E5%81%9A%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA/" >高数方法论</a></li>
+            
+                <li><span>08-19</span><a href="/2023/08/19/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" >进程与线程</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%91%E5%B1%95%E9%98%B6%E6%AE%B5/" >操作系统发展阶段</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" >操作系统概述</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BC%95%E5%AF%BC%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA/" >操作系统结构与引导、虚拟机</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/" >操作系统运行环境</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" >图的基本概念</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" >图的存储及基本操作</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/%E5%9B%BE%E7%9A%84%E5%BA%94%E7%94%A8/" >图的应用</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" >图的遍历</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F/%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F/" >交换排序</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F/%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93/" >排序总结</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/B%E6%A0%91%E4%B8%8EB+%E6%A0%91/" >B树与B+树</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE/" >散列查找</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/%E6%A0%91%E5%9E%8B%E6%9F%A5%E6%89%BE-%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/" >树型查找-二叉排序树</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/%E6%A0%91%E5%9E%8B%E6%9F%A5%E6%89%BE-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/" >树型查找-平衡二叉树</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/%E6%A0%91%E5%9E%8B%E6%9F%A5%E6%89%BE-%E7%BA%A2%E9%BB%91%E6%A0%91/" >树型查找-红黑树</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%9F%A5%E6%89%BE/%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%E5%92%8C%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE/" >顺序查找和折半查找</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/%E9%93%BE%E8%A1%A8/" >链表</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E4%BC%A0%E8%BE%93%E5%B1%82/%E4%BC%A0%E8%BE%93%E5%B1%82%E2%80%94TCP%E5%8D%8F%E8%AE%AE/" >TCP协议</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8/" >主存储器</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/%E5%AD%98%E5%82%A8%E5%99%A8/" >存储器</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/%E5%AD%98%E5%82%A8%E5%99%A8%E6%A6%82%E8%BF%B0/" >存储器概述</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" >高速缓冲存储器</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/" >虚拟存储器</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%80%BB%E7%BA%BF/%E6%80%BB%E7%BA%BF/" >总线</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%80%BB%E7%BA%BF/%E6%80%BB%E7%BA%BF%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%AE%9A%E6%97%B6/" >总线事务与定时</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%80%BB%E7%BA%BF/%E6%80%BB%E7%BA%BF%E6%A6%82%E8%BF%B0/" >总线概述</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/CISC%E5%92%8CRISC/" >CISC和RISC</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/%E6%8C%87%E4%BB%A4%E5%AF%BB%E5%9D%80/" >指令寻址</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" >指令系统</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/%E6%95%B0%E5%88%B6%E4%B8%8E%E7%BC%96%E7%A0%81/" >数制与编码</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/" >数据的表示与运算</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/" >计算机性能指标</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/" >计算机系统层次结构</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/IO%E6%8E%A5%E5%8F%A3/" >IO接口</a></li>
+            
+                <li><span>08-18</span><a href="/2023/08/18/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/IO%E6%96%B9%E5%BC%8F/" >IO方式</a></li>
+            
+                <li><span>08-10</span><a href="/2023/08/10/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0/" >无穷级数</a></li>
+            
+                <li><span>07-30</span><a href="/2023/07/30/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8/" >多处理器</a></li>
+            
+                <li><span>07-29</span><a href="/2023/07/29/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF/" >指令流水线</a></li>
+            
+                <li><span>07-29</span><a href="/2023/07/29/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" >控制器的功能和工作原理</a></li>
+            
+                <li><span>07-28</span><a href="/2023/07/28/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" >指令执行过程</a></li>
+            
+                <li><span>07-28</span><a href="/2023/07/28/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF/" >数据通路</a></li>
+            
+                <li><span>07-27</span><a href="/2023/07/27/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/CPU%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/" >CPU的功能和基本结构</a></li>
+            
+                <li><span>07-25</span><a href="/2023/07/25/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6/" >多元函数微分学</a></li>
+            
+                <li><span>07-20</span><a href="/2023/07/20/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86/" >二重积分</a></li>
+            
+                <li><span>07-18</span><a href="/2023/07/18/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" >微分方程</a></li>
+            
+                <li><span>07-16</span><a href="/2023/07/16/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/" >积分</a></li>
+            
+                <li><span>07-15</span><a href="/2023/07/15/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/" >导数</a></li>
+            
+                <li><span>07-12</span><a href="/2023/07/12/%E6%95%B0%E5%AD%A6%E8%A6%81%E7%82%B9/%E9%AB%98%E6%95%B0/%E6%9E%81%E9%99%90/" >极限</a></li>
+            
+            </ul>
+        
+    </article>
+</section>
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
