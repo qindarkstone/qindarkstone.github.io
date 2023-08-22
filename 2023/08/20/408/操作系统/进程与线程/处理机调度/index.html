@@ -80,7 +80,7 @@
 		</a>
 	</div>
 	<div class="kira-count">
-		<div><span>文章</span>53</div>
+		<div><span>文章</span>55</div>
 		<div><span>标签</span>8</div>
 		<div><span>分类</span>21</div>
 	</div>
@@ -233,7 +233,14 @@
             <a class="category-list-link" href="/categories/408/">
               408
             </a>
-            <span class="category-list-count">44</span>
+            <span class="category-list-count">45</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/一些复习的吐槽/">
+              一些复习的吐槽
+            </a>
+            <span class="category-list-count">1</span>
           </li>
         
           <li class="category-list-item">
@@ -241,13 +248,6 @@
               中央处理器
             </a>
             <span class="category-list-count">6</span>
-          </li>
-        
-          <li class="category-list-item">
-            <a class="category-list-link" href="/categories/吐槽/">
-              吐槽
-            </a>
-            <span class="category-list-count">1</span>
           </li>
         
           <li class="category-list-item">
@@ -345,7 +345,7 @@
             <a class="category-list-link" href="/categories/408/计算机组成原理/">
               计算机组成原理
             </a>
-            <span class="category-list-count">23</span>
+            <span class="category-list-count">24</span>
           </li>
         
           <li class="category-list-item">
@@ -480,8 +480,8 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2023年08月20日</a>
-			<a><i class="kirafont icon-edit-fill"></i>875 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.1k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
 		</div>
 		<h1><span id="处理机调度">处理机调度</span></h1><ul>
 <li><h3><span id="作业">作业</span></h3><ul>
@@ -489,7 +489,19 @@
 <li>进程是从<code>操作系统</code>出发的， 由系统生成，是操作系统的资源分配和独立运行的基本单位</li>
 </ul>
 </li>
-<li><h3><span id="调度算法时间的计算可以采用画甘特图来进行">调度算法时间的计算可以采用画<code>甘特图</code>来进行</span></h3></li>
+<li><h3><span id="调度算法时间的计算可以采用画甘特图来进行">调度算法时间的计算可以采用画<code>甘特图</code>来进行</span></h3><ul>
+<li>在进行处理机调度的性能计算时，题目中给出<code>&quot;作业在时刻0以1，2，3，4，5的顺序到达&quot;</code>时（<em>8.22更新</em>）<ul>
+<li>此处的顺序到达更多的不是直接上处理机运行</li>
+<li>而是更像暂时顺序进入一个就绪队列<ul>
+<li>当进行诸如FCFS、RR等调度时，顺序出队</li>
+<li>但当进行SJF、优先级等调度时，就扫描此就绪队列（此时几乎可以视作同时到达），根据调度算法的条件来上处理机执行</li>
+<li>且同时到达SJF的平均周转时间是最短的，注意检验</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><h3><span id="做题时注意看好是等待时间-周转时间还是响应时间">做题时注意看好是等待时间、周转时间还是响应时间</span></h3></li>
 <li><h3><span id="做题时注意调度的开始时机不要忽视零时刻时进行的调度">做题时注意调度的开始时机，不要忽视<code>零时刻</code>时进行的调度</span></h3></li>
 <li><h3><span id="处理机调度">处理机调度</span></h3><ul>
@@ -521,8 +533,7 @@
 </ul>
 </li>
 <li><h3><span id="时间片轮转">时间片轮转</span></h3><ul>
-<li><p>主要目的是使多个交互的用户能够得到<code>及时响应</code></p>
-<ul>
+<li>主要目的是使多个交互的用户能够得到<code>及时响应</code><ul>
 <li>主要适用于<code>分时系统</code><ul>
 <li>响应时间与<code>时间片</code>和<code>用户数</code>成正比</li>
 </ul>
@@ -530,19 +541,21 @@
 <li>用户交互性好，响应快，改善人机环境，满足用户需求</li>
 </ul>
 </li>
-<li><p>频繁切换增加了<code>系统开销</code>，<code>吞吐量</code>和<code>周转时间</code>均不如<code>批处理</code></p>
+<li>频繁切换增加了<code>系统开销</code>，<code>吞吐量</code>和<code>周转时间</code>均不如<code>批处理</code></li>
+<li>时钟中断是系统中特定的<code>周期性时钟节拍</code><ul>
+<li>操作系统通过<code>时钟中断</code>来确定<code>时间间隔</code>，实现<code>时间的延时</code>和<code>任务的超时</code><ul>
+<li>比如，24个时钟中断作为一个时间片，OS每秒发出120次时钟中断（*王道P75  08.*）</li>
+</ul>
 </li>
-<li><p>时钟中断是系统中特定的<code>周期性时钟节拍</code></p>
-<ul>
-<li>操作系统通过它来确定<code>时间间隔</code>，实现<code>时间的延时</code>和<code>任务的超时</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>现代操作系统为了保证能最优，通常根据<code>响应时间</code>、<code>系统开销</code>、<code>进程数量</code>、<code>进程运行时间</code>等因素确定时间片大小</p>
-</li>
-<li><p>处于运行态的进程用完一个时间片后，其状态会变为<code>就绪态</code>，等待下一次处理器调度。</p>
-</li>
-<li><p>进程执行完最后的语句并使用<code>系统调用exit</code> 请求操作系统删除它或出现一些异常情况时，进程才会终止。</p>
-</li>
+<ul>
+<li>处于运行态的进程用完一个时间片后，其状态会变为<code>就绪态</code>，等待下一次处理器调度。</li>
+<li>注意此时的就绪态是<code>进入就绪队列等待</code>，若后面还有进程到达，在此等待进程后上处理机执行完后才执行，做题注意<code>到达时间</code></li>
+<li>进程执行完最后的语句并使用<code>系统调用exit</code> 请求操作系统删除它或出现一些异常情况时，进程才会终止。</li>
 </ul>
 </li>
 <li><h3><span id="响应比">响应比</span></h3><ul>
@@ -551,6 +564,7 @@
 <li>而长进程的响应比可以随等待时间的增加而提高，不会产生进程无法调度的情况。</li>
 </ul>
 </li>
+<li>可以说响应比是一种使用<code>乘除法</code>构造<code>动态优先数</code>的方法</li>
 </ul>
 </li>
 <li><h3><span id="优先级">优先级</span></h3><ul>
@@ -617,7 +631,7 @@
 				<span>下一章</span>
 				<a href="/2023/08/21/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5/"> 同步与互斥</a>
 			</div>
-			                          
+			                                 
 			<!-- 先找到与当前文字相同的目录 -->
 			                  
 			<!-- 在找到当前文章所在的 index -->
