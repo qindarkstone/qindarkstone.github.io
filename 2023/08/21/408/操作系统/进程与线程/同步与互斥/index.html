@@ -233,14 +233,7 @@
             <a class="category-list-link" href="/categories/408/">
               408
             </a>
-            <span class="category-list-count">45</span>
-          </li>
-        
-          <li class="category-list-item">
-            <a class="category-list-link" href="/categories/一些复习的吐槽/">
-              一些复习的吐槽
-            </a>
-            <span class="category-list-count">1</span>
+            <span class="category-list-count">46</span>
           </li>
         
           <li class="category-list-item">
@@ -248,6 +241,13 @@
               中央处理器
             </a>
             <span class="category-list-count">6</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/吐槽/">
+              吐槽
+            </a>
+            <span class="category-list-count">1</span>
           </li>
         
           <li class="category-list-item">
@@ -289,7 +289,7 @@
             <a class="category-list-link" href="/categories/408/操作系统/">
               操作系统
             </a>
-            <span class="category-list-count">7</span>
+            <span class="category-list-count">8</span>
           </li>
         
           <li class="category-list-item">
@@ -366,7 +366,7 @@
             <a class="category-list-link" href="/categories/408/操作系统/进程与线程/">
               进程与线程
             </a>
-            <span class="category-list-count">3</span>
+            <span class="category-list-count">4</span>
           </li>
         
           <li class="category-list-item">
@@ -384,7 +384,7 @@
 			
 	<div class="kira-widget-wrap">
 		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
-			<a href="/tags/408/" style="font-size: 20px;">408</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 10px;">吐槽</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 12px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16px;">数据结构</a> <a href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">考研数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 18px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 14px;">高等数学</a>
+			<a href="/tags/408/" style="font-size: 20px;">408</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 10px;">吐槽</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 12.5px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 15px;">数据结构</a> <a href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" style="font-size: 12.5px;">考研数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 17.5px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 12.5px;">高等数学</a>
 		</div>
 		
 	</div>
@@ -480,13 +480,112 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2023年08月21日</a>
-			<a><i class="kirafont icon-edit-fill"></i>148 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.3k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
 		</div>
 		<h1><span id="同步与互斥">同步与互斥</span></h1><ul>
-<li><h3><span id="临界区互斥的四种软件方法和三种硬件方法都无法实现让权等待">临界区互斥的四种软件方法和三种硬件方法都<code>无法实现让权等待</code></span></h3></li>
+<li><h3><span id="临界区互斥的四种软件方法和三种硬件方法都无法实现让权等待">临界区互斥的四种软件方法和三种硬件方法都<code>无法实现让权等待</code></span></h3><ul>
+<li>注意跳出阻塞中的while循环（也就是进入临界区）的条件是<code>false</code>，值为true会持续阻塞在while语句中</li>
+</ul>
+</li>
 <li><h3><span id="互斥锁和信号量机制都需要依赖原子操作来实现检查和占用锁的过程例如-tsl-指令">互斥锁和信号量机制都需要依赖<strong>原子操作</strong>来实现检查和占用锁的过程，例如 TSL 指令</span></h3></li>
 <li><p>临界区互斥的软件实现方式（如单标志法）和硬件实现方式（如中断屏蔽方法）是<code>不同于互斥锁和信号量机制</code>的方法。它们是在不支持原子操作的系统中，通过编程或硬件手段来实现临界区的互斥</p>
+</li>
+<li><h2><span id="临界区与临界资源">临界区与临界资源</span></h2><ul>
+<li>注意区分清楚临界区与临界资源<ul>
+<li>如五个并发进程的<code>临界资源可能只有一个</code>，但是<code>每个进程都有一个临界区</code><ul>
+<li>临界区：访问临界资源的代码段</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>进程进入临界区必须满足互斥条件，当进程进入临界区但尚未离开时就被迫进入阻塞是可以的。系统中经常出现这样的情形。<ul>
+<li>在此状态下，只要其他进程在运行过程中不寻求进入该进程的临界区，就应允许其运行，即<code>分配 CPU</code>。</li>
+<li>该进程所锁定的临界区是不允许其他进程访问的，其他进程若要访问，必定会在临界区的”锁”上阻塞，期待该进程下次运行时可以离开并将临界区交给它。</li>
+</ul>
+</li>
+<li>临界资源是<code>互斥共享资源</code>，<code>非共享数据</code>不属于临界资源</li>
+<li>临界资源与共享资源的区别在于，在一段时间内能否允许被多个进程访问（并发使用）<ul>
+<li><code>公用队列</code>可供多个进程使用，但一次只可供一个进程使用，若多个进程同时使用公用队列，势必造成队列中的数据混乱而无法使用。</li>
+<li><code>私用数据</code>仅供一个进程使用，不存在临界区问题<ul>
+<li>如不同程序段运行的不同代码的变量，可能变量名相同（类似于函数的<code>局部变量</code>），实际上存储在不同的地址单元中，并不属于临界资源</li>
+</ul>
+</li>
+<li><code>可重入的程序代码</code>一次可供多个进程使用。<ul>
+<li>可重入代码，也称纯代码。</li>
+<li>允许多个进程在任意时刻共享访问。</li>
+<li>每次调用都以同样的方式运行，为使其结果不受影响，代码不能被任何进程修改。</li>
+<li>如<code>共享程序段</code><ul>
+<li>可能同时被多个进程使用，所以必须可重入编码，否则无法实现共享的功能。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2><span id="同步与互斥的实现">同步与互斥的实现</span></h2><ul>
+<li>在高级语言中一条语句编译后会形成若干条指令，这代表着一句代码中间的实现可能会被打断<ul>
+<li>如x+&#x3D;1编译后对应的指令<ul>
+<li>取出变量x对应的内存单元中的数据，放入寄存器R1</li>
+<li>计算R1+1的值并将值放回x对应的内存单元</li>
+</ul>
+</li>
+<li>操作如果不实现互斥，就有可能导致程序执行过程中变的不确定，使数据混乱</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2><span id="管程">管程</span></h2><ul>
+<li>管程的 signal操作与信号量机制中的V操作不同<ul>
+<li>信号量机制中的V操作一定会<code>改变信号量的值</code>S&#x3D;S+1。</li>
+<li>而管程中的 signal操作是针对<code>某个条件变量</code>的，若不存在因该条件而阻塞的进程， 则 signal不会产生任何影响。</li>
+</ul>
+</li>
+<li>管程是<code>进程同步工具</code>，解决信号量机制大量同步操作分散的问题</li>
+<li></li>
+</ul>
+</li>
+<li><h2><span id="信号量机制">信号量机制</span></h2><ul>
+<li>在<code>多道程序技术</code>中，信号量机制是一种有效实现<code>进程同步</code>和<code>互斥</code>的工具。进程执行的<code>前驱关系实质上是指进程的同步关系</code>。<ul>
+<li>除此之外，只有进程的<code>并发执行</code>不需要信号量来控制</li>
+</ul>
+</li>
+<li>与互斥信号量初值一般置1不同，用PV操作实现进程同步时，信号量的初值应根据具体情况来确定。<ul>
+<li>若期望的消息尚未产生，则对应的初值应设为 0</li>
+<li>若期望的消息已存在，则信号量的初值应设为一个非0的正整数。</li>
+</ul>
+</li>
+<li>区分<code>互斥信号量</code>与<code>同步信号量</code><ul>
+<li>互斥信号量：初始值一般为1</li>
+<li>同步信号量：初始值根据<code>可用资源数</code>确定<ul>
+<li>生产者消费者问题中，一般会设置两个同步信号量<ul>
+<li>empty&#x3D;资源数<ul>
+<li>表示当前缓冲器的剩余容量</li>
+</ul>
+</li>
+<li>full&#x3D;0<ul>
+<li>表示当前缓冲器中有多少可供消费的产品</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>若系统原来存在等待进入临界区的进程，mutex小于等于-1，<ul>
+<li>在执行 V（mutex） 操作后，mutex的值小于等于0。</li>
+</ul>
+</li>
+<li>记录型信号量<ul>
+<li>S.value&gt;0，表示某类可用资源的数量。每次P操作，意味着诡求分配一个单位的资源。</li>
+<li>S.value &lt;&#x3D;0，表示某类资源已经没有，或者说还有因请求该资源而被阻塞的进程。</li>
+<li>S.value &lt;&#x3D;0时的绝对值，表示等待进程数目。</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -520,7 +619,7 @@
 				<span>下一章</span>
 				<a href="/2023/08/22/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E8%A6%81%E7%82%B9/%E4%BD%93%E7%B3%BB%E6%9E%84%E5%BB%BA%E4%B8%8E%E7%9F%A5%E8%AF%86%E6%8F%90%E7%82%BC-%E8%AE%A1%E7%BB%84%E7%AF%87/"> 计组体系构建----有关存储、指令与计算</a>
 			</div>
-			                          
+			                                 
 			<!-- 先找到与当前文字相同的目录 -->
 			                     
 			<!-- 在找到当前文章所在的 index -->
@@ -529,6 +628,12 @@
 			<div class="old">
 				<span>上一章</span>
 				<a href="/2023/08/20/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6/"> 处理机调度</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/08/23/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E6%AD%BB%E9%94%81/"> 死锁</a>
 			</div>
 			                                                                                  
 			<!-- 先找到与当前文字相同的目录 -->
@@ -539,6 +644,12 @@
 			<div class="old">
 				<span>上一章</span>
 				<a href="/2023/08/20/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6/"> 处理机调度</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/08/23/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/%E6%AD%BB%E9%94%81/"> 死锁</a>
 			</div>
 			                                                                  
 		</nav>
