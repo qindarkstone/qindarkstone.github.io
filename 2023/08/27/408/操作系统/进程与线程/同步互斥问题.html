@@ -1,0 +1,89 @@
+<hr>
+<h2 id="title-同步与互斥date-2023-09-2-23-26-48tags-408-操作系统-categories-408-操作系统-进程与线程-cover-https-user-images-githubusercontent-com-81075299-261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4-jpg"><a href="#title-同步与互斥date-2023-09-2-23-26-48tags-408-操作系统-categories-408-操作系统-进程与线程-cover-https-user-images-githubusercontent-com-81075299-261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4-jpg" class="headerlink" title="title: 同步与互斥date: 2023-09-2 23:26:48tags: [408,操作系统]categories: [408,操作系统,进程与线程]cover: https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg"></a>title: 同步与互斥<br>date: 2023-09-2 23:26:48<br>tags: [408,操作系统]<br>categories: [408,操作系统,进程与线程]<br>cover: <a href="https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg">https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg</a></h2><h1 id="同步互斥问题"><a href="#同步互斥问题" class="headerlink" title="同步互斥问题"></a>同步互斥问题</h1><ul>
+<li><h5 id="生产者消费者问题——进程关系为“生产资源—消费资源”"><a href="#生产者消费者问题——进程关系为“生产资源—消费资源”" class="headerlink" title="生产者消费者问题——进程关系为“生产资源—消费资源”"></a>生产者消费者问题——进程关系为“生产资源—消费资源”</h5></li>
+<li><h5 id="理发师问题——进程关系为“服务——被服务”"><a href="#理发师问题——进程关系为“服务——被服务”" class="headerlink" title="理发师问题——进程关系为“服务——被服务”"></a>理发师问题——进程关系为“服务——被服务”</h5><ul>
+<li>顾客是资源</li>
+<li>理发师消耗资源</li>
+</ul>
+</li>
+<li><h5 id="读者写者问题——同类进程不互斥，异类进程互斥"><a href="#读者写者问题——同类进程不互斥，异类进程互斥" class="headerlink" title="读者写者问题——同类进程不互斥，异类进程互斥"></a>读者写者问题——同类进程不互斥，异类进程互斥</h5></li>
+<li><h5 id="哲学家进餐问题——只有一类进程，每个进程需要同时拥有多种资源才能运行"><a href="#哲学家进餐问题——只有一类进程，每个进程需要同时拥有多种资源才能运行" class="headerlink" title="哲学家进餐问题——只有一类进程，每个进程需要同时拥有多种资源才能运行"></a>哲学家进餐问题——只有一类进程，每个进程需要同时拥有多种资源才能运行</h5><ul>
+<li>不同类型的资源需要判断资源与资源的制约条件</li>
+</ul>
+</li>
+<li><h2 id="生产者消费者步骤"><a href="#生产者消费者步骤" class="headerlink" title="生产者消费者步骤"></a>生产者消费者步骤</h2><ol>
+<li><h5 id="有几类进程"><a href="#有几类进程" class="headerlink" title="有几类进程"></a>有几类进程</h5><ul>
+<li>每类进程对应一个函数</li>
+</ul>
+</li>
+<li><h5 id="在函数内部用中文描述进程动作"><a href="#在函数内部用中文描述进程动作" class="headerlink" title="在函数内部用中文描述进程动作"></a>在函数内部用中文描述进程动作</h5><ul>
+<li>只做一次，不加while循环</li>
+<li>不断重复，加while循环（while（1）{}）<ul>
+<li>可能会有n个进程同时循环进行判断，即n个消费者</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="分析每个动作之前是否需要获取资源（P操作）"><a href="#分析每个动作之前是否需要获取资源（P操作）" class="headerlink" title="分析每个动作之前是否需要获取资源（P操作）"></a>分析每个动作之前是否需要获取资源（P操作）</h5><ul>
+<li>只要有P操作必有V操作</li>
+<li>每写一个P就要检查在其他地方是否有对应的V</li>
+<li>注意区分临界区与资源</li>
+<li>互斥操作夹在最内部</li>
+<li>注意隐含的互斥条件，如访问缓冲区P（mutex）<ul>
+<li>注意好共享缓冲区</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="所有PV操作写完后在定义信号量（Semaphore）"><a href="#所有PV操作写完后在定义信号量（Semaphore）" class="headerlink" title="所有PV操作写完后在定义信号量（Semaphore）"></a>所有PV操作写完后在定义信号量（Semaphore）</h5><ul>
+<li>注意信号量初值<ul>
+<li>定义完信号量后，再思考每个信号量的初值</li>
+<li>写好注释</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="检查代码是否正确"><a href="#检查代码是否正确" class="headerlink" title="检查代码是否正确"></a>检查代码是否正确</h5><ul>
+<li>多个P连续出现时，是否有可能产生死锁</li>
+<li>即注意P操作的顺序是否合理<ul>
+<li>一对PV操作连续出现，中间无其他操作，则不会死锁</li>
+</ul>
+</li>
+<li>注意好死锁产生的四个必要条件</li>
+</ul>
+</li>
+<li><h5 id="读题检查是否符合题意"><a href="#读题检查是否符合题意" class="headerlink" title="读题检查是否符合题意"></a>读题检查是否符合题意</h5></li>
+</ol>
+</li>
+<li><h2 id="前驱后继关系"><a href="#前驱后继关系" class="headerlink" title="前驱后继关系"></a>前驱后继关系</h2><ul>
+<li><h5 id="每一个箭头是一个同步信号量（前V后P），初始值为0"><a href="#每一个箭头是一个同步信号量（前V后P），初始值为0" class="headerlink" title="每一个箭头是一个同步信号量（前V后P），初始值为0"></a>每一个箭头是一个同步信号量（前V后P），初始值为0</h5></li>
+</ul>
+</li>
+<li><h2 id="哲学家进餐问题"><a href="#哲学家进餐问题" class="headerlink" title="哲学家进餐问题"></a>哲学家进餐问题</h2><ul>
+<li><h5 id="关键点是限制并行"><a href="#关键点是限制并行" class="headerlink" title="关键点是限制并行"></a>关键点是限制并行</h5><ul>
+<li>解决循环等待问题</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><h5 id="限制申请资源的顺序（不通用）"><a href="#限制申请资源的顺序（不通用）" class="headerlink" title="限制申请资源的顺序（不通用）"></a>限制申请资源的顺序（不通用）</h5><ul>
+<li>规定单号先取左筷子，双号先取右筷子</li>
+</ul>
+</li>
+<li><h5 id="限制并发进程数（通用，但并发度不高）"><a href="#限制并发进程数（通用，但并发度不高）" class="headerlink" title="限制并发进程数（通用，但并发度不高）"></a>限制并发进程数（通用，但并发度不高）</h5><ul>
+<li>规定统一时间只能有一个哲学家进餐（即禁止并行）<ul>
+<li>也就是至多四名同时取筷子</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="让进程一口气获得所有资源，再开始运行（通用，并发度高，最优解）"><a href="#让进程一口气获得所有资源，再开始运行（通用，并发度高，最优解）" class="headerlink" title="让进程一口气获得所有资源，再开始运行（通用，并发度高，最优解）"></a>让进程一口气获得所有资源，再开始运行（通用，并发度高，最优解）</h5><ul>
+<li>只有左右两边都可用时，才允许进餐<ul>
+<li>本质为互斥的获取所有资源，当获取完后才释放临界区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>

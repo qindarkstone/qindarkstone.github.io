@@ -1,0 +1,123 @@
+<hr>
+<h2 id="title-处理机调度date-2023-08-20-19-26-48tags-408-操作系统-categories-408-操作系统-进程与线程-cover-https-user-images-githubusercontent-com-81075299-261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4-jpg"><a href="#title-处理机调度date-2023-08-20-19-26-48tags-408-操作系统-categories-408-操作系统-进程与线程-cover-https-user-images-githubusercontent-com-81075299-261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4-jpg" class="headerlink" title="title: 处理机调度date: 2023-08-20 19:26:48tags: [408,操作系统]categories: [408,操作系统,进程与线程]cover: https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg"></a>title: 处理机调度<br>date: 2023-08-20 19:26:48<br>tags: [408,操作系统]<br>categories: [408,操作系统,进程与线程]<br>cover: <a href="https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg">https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg</a></h2><h1 id="处理机调度"><a href="#处理机调度" class="headerlink" title="处理机调度"></a>处理机调度</h1><ul>
+<li><h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><ul>
+<li>作业是从<code>用户角度</code>出发的，它由用户提交，以<code>用户任务</code>为单位</li>
+<li>进程是从<code>操作系统</code>出发的， 由系统生成，是操作系统的资源分配和独立运行的基本单位</li>
+</ul>
+</li>
+<li><h3 id="调度算法时间的计算可以采用画甘特图来进行"><a href="#调度算法时间的计算可以采用画甘特图来进行" class="headerlink" title="调度算法时间的计算可以采用画甘特图来进行"></a>调度算法时间的计算可以采用画<code>甘特图</code>来进行</h3><ul>
+<li>在进行处理机调度的性能计算时，题目中给出<code>&quot;作业在时刻0以1，2，3，4，5的顺序到达&quot;</code>时（<em>8.22更新</em>）<ul>
+<li>此处的顺序到达更多的不是直接上处理机运行</li>
+<li>而是更像暂时顺序进入一个就绪队列<ul>
+<li>当进行诸如FCFS、RR等调度时，顺序出队</li>
+<li>但当进行SJF、优先级等调度时，就扫描此就绪队列（此时几乎可以视作同时到达），根据调度算法的条件来上处理机执行</li>
+<li>且同时到达SJF的平均周转时间是最短的，注意检验</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="做题时注意看好是等待时间、周转时间还是响应时间"><a href="#做题时注意看好是等待时间、周转时间还是响应时间" class="headerlink" title="做题时注意看好是等待时间、周转时间还是响应时间"></a>做题时注意看好是等待时间、周转时间还是响应时间</h3></li>
+<li><h3 id="做题时注意调度的开始时机，不要忽视零时刻时进行的调度"><a href="#做题时注意调度的开始时机，不要忽视零时刻时进行的调度" class="headerlink" title="做题时注意调度的开始时机，不要忽视零时刻时进行的调度"></a>做题时注意调度的开始时机，不要忽视<code>零时刻</code>时进行的调度</h3></li>
+<li><h3 id="处理机调度-1"><a href="#处理机调度-1" class="headerlink" title="处理机调度"></a>处理机调度</h3><ul>
+<li>实际调度不会存在处理器为空，就绪队列全满的情况</li>
+<li>但实际调度种可以出现处理器为空，阻塞队列全满的状态<ul>
+<li>此时发生了<code>死锁</code></li>
+</ul>
+</li>
+<li>当进程处于临界区时， 说明进程正在占用处理机，只要<code>不破坏临界资源的使用规则</code>，就不会影响处理机的调度。<ul>
+<li>比如， 通常访问的临界资源可能是慢速的外设（如打印机），若在进程访问打印机时，不能进行处理机调度，则系统的性能将非常差。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="选择调度算法时考虑的准则"><a href="#选择调度算法时考虑的准则" class="headerlink" title="选择调度算法时考虑的准则"></a>选择调度算法时考虑的准则</h3><ul>
+<li>公平<ul>
+<li>确保每个进程获得合理的 <code>CPU 份额</code></li>
+</ul>
+</li>
+<li>有效<ul>
+<li>使CPU尽可能地<code>忙碌</code></li>
+</ul>
+</li>
+<li>响应时间<ul>
+<li>使交互用户的<code>响应时间</code>尽可能短</li>
+</ul>
+</li>
+<li>周转时间;<ul>
+<li>使<code>批处理用户等待输出的时间</code>尽可能短</li>
+</ul>
+</li>
+<li>吞吐量</li>
+<li>使单位时间处理的<code>进程数</code>尽可能最多</li>
+</ul>
+</li>
+<li><h3 id="时间片轮转"><a href="#时间片轮转" class="headerlink" title="时间片轮转"></a>时间片轮转</h3><ul>
+<li>主要目的是使多个交互的用户能够得到<code>及时响应</code><ul>
+<li>主要适用于<code>分时系统</code><ul>
+<li>响应时间与<code>时间片</code>和<code>用户数</code>成正比</li>
+</ul>
+</li>
+<li>用户交互性好，响应快，改善人机环境，满足用户需求</li>
+</ul>
+</li>
+<li>频繁切换增加了<code>系统开销</code>，<code>吞吐量</code>和<code>周转时间</code>均不如<code>批处理</code></li>
+<li>时钟中断是系统中特定的<code>周期性时钟节拍</code><ul>
+<li>操作系统通过<code>时钟中断</code>来确定<code>时间间隔</code>，实现<code>时间的延时</code>和<code>任务的超时</code><ul>
+<li>比如，24个时钟中断作为一个时间片，OS每秒发出120次时钟中断（*王道P75  08.*）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>现代操作系统为了保证能最优，通常根据<code>响应时间</code>、<code>系统开销</code>、<code>进程数量</code>、<code>进程运行时间</code>等因素确定时间片大小</p>
+<ul>
+<li>处于运行态的进程用完一个时间片后，其状态会变为<code>就绪态</code>，等待下一次处理器调度。</li>
+<li>注意此时的就绪态是<code>进入就绪队列等待</code>，若后面还有进程到达，在此等待进程后上处理机执行完后才执行，做题注意<code>到达时间</code></li>
+<li>进程执行完最后的语句并使用<code>系统调用exit</code> 请求操作系统删除它或出现一些异常情况时，进程才会终止。</li>
+</ul>
+</li>
+<li><h3 id="响应比"><a href="#响应比" class="headerlink" title="响应比"></a>响应比</h3><ul>
+<li>综合考虑了每个进程的<code>等待时间</code>和<code>执行时间</code><ul>
+<li>对于同时到达的长进程和短进程，短进程会优先执行，以提商系统吞吐量</li>
+<li>而长进程的响应比可以随等待时间的增加而提高，不会产生进程无法调度的情况。</li>
+</ul>
+</li>
+<li>可以说响应比是一种使用<code>乘除法</code>构造<code>动态优先数</code>的方法</li>
+</ul>
+</li>
+<li><h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><ul>
+<li>作业的优先级与长作业、短作业或系统要求资源的多少没有必然的关系</li>
+<li>在动态优先级中<ul>
+<li>随着<code>进程执行时间的增加</code>其优先权随之<code>降低</code></li>
+<li>随着<code>作业等待时间的增加</code>其优先权相应<code>上升</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="多级反馈队列"><a href="#多级反馈队列" class="headerlink" title="多级反馈队列"></a>多级反馈队列</h3><ul>
+<li>需要综合考虑<ul>
+<li>优先级<code>数量</code>、优先级之间的<code>转换规则</code></li>
+<li>就绪队列的数量<ul>
+<li>影响<code>长进程</code>的最终完成时间</li>
+</ul>
+</li>
+<li>就绪队列的优先级<ul>
+<li>影响进程<code>执行的顺序</code></li>
+</ul>
+</li>
+<li>各就绪队列的调度算法<ul>
+<li>影响各队列中进程的调度顺序</li>
+</ul>
+</li>
+<li>进程在就绪队列中的迁移条件<ul>
+<li>影响各进程在各队列中的执行时间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>

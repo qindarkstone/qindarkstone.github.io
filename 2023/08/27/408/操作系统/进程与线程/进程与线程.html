@@ -1,0 +1,130 @@
+<hr>
+<h2 id="title-进程与线程date-2023-08-19-16-26-48tags-408-操作系统-categories-408-操作系统-进程与线程-cover-https-user-images-githubusercontent-com-81075299-261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4-jpg"><a href="#title-进程与线程date-2023-08-19-16-26-48tags-408-操作系统-categories-408-操作系统-进程与线程-cover-https-user-images-githubusercontent-com-81075299-261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4-jpg" class="headerlink" title="title: 进程与线程date: 2023-08-19 16:26:48tags: [408,操作系统]categories: [408,操作系统,进程与线程]cover: https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg"></a>title: 进程与线程<br>date: 2023-08-19 16:26:48<br>tags: [408,操作系统]<br>categories: [408,操作系统,进程与线程]<br>cover: <a href="https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg">https://user-images.githubusercontent.com/81075299/261602447-a31dfd48-03cc-4a8b-89c8-c957728682f4.jpg</a></h2><h1 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h1><ul>
+<li><h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><ul>
+<li>进程是<code>暂时</code>的，程序是<code>永久</code>的</li>
+<li>进程是<code>动态</code>的，程序是<code>静态</code>的</li>
+<li>进程至少由代码、数据和 PCB 组成，程序仅需代码和数据即可<ul>
+<li>程序代码经过多次创建可<code>对应不同进程</code></li>
+<li>同一个系统的进程（或线程）可以由<code>系统调用</code>的方法被不同的进程（或线程）多次使用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><ul>
+<li>进程是系统分配资源的基本单位，包括<code>内存地址空间</code><ul>
+<li>因为进程的资源独立，所以各种操作需要<code>系统调用</code>来通过<code>操作系统内核</code>完成</li>
+</ul>
+</li>
+<li><code>动态性</code>是进程最重要的特性，以此来区分文件形式的<code>静态程序</code>。<ul>
+<li>操作系统引入进程的概念， 是为了从变化的角度动态地分析和研究程序的执行。</li>
+</ul>
+</li>
+<li>在单处理机系统中，发生<code>死锁</code>时可能进程全部处于阻塞态，导致无进程处于运行态</li>
+<li>执行信号量的<code>wait（）</code>操作时，如果信号量的值<code>小于或等于0</code>，则进程进入阻塞态<ul>
+<li>需要其他进程使用<code>signal（）</code>操作唤醒</li>
+</ul>
+</li>
+<li>系统是根据进程的<code>PCB</code>而非任何其他因素来感知到进程存在的<ul>
+<li>PCB<code>常驻内存</code></li>
+</ul>
+</li>
+<li>进程的<code>封闭性</code>是指程序执行的结果只<code>取决于进程本身</code>，不受外界影响<ul>
+<li>也就是说，进程在执行过程中不管是不停顿地执行，还是走走停停，<code>进程的执行速度都不会改变它的执行结果</code>。</li>
+<li>失去封闭性后，不同速度下的执行结果不同。</li>
+</ul>
+</li>
+<li>进程有它的生命周期，不会一直存在于系统中，也不一定需要用户显式地撤销<ul>
+<li>进程可在完成时撤销</li>
+<li>也可在出现<code>内存错误</code>或<code>外界干预</code>等时撤销</li>
+</ul>
+</li>
+<li>注意区分清楚进程<code>生命周期内的几种状态</code>和<code>进程的创建与终止</code><ul>
+<li>进程的控制中具有的功能是<code>创建新进程</code>、<code>撤销已有进程</code>、<code>实现进程状态转换</code></li>
+<li>通过<code>原语</code>实现进程控制</li>
+</ul>
+</li>
+<li>进程创建需要占用系统内存来存放 PCB 的<code>数据结构</code>，所以一个系统能够创建的进程总数是有限的<ul>
+<li>进程的最大数目取决于<code>系统内存的大小</code>，它在系统安装时就已确定（若后期内存增加，系统能够创建的进程总数也应增加，但一般需要重新启动）。</li>
+</ul>
+</li>
+<li>父进程可与子进程共享一部分资源，但不能共享虚拟地址空间，在创建子进程时，会为子进程分配资源，如<code>虚拟地址空间</code>等</li>
+</ul>
+</li>
+<li><h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><ul>
+<li>在键盘输入时，整个系统只有一个键盘，而且键盘输入是人的操作，速度比较慢，完全可以使用<code>一个线程</code>来处理整个系统的键盘输入。</li>
+</ul>
+</li>
+<li><h3 id="线程与线程"><a href="#线程与线程" class="headerlink" title="线程与线程"></a>线程与线程</h3><ul>
+<li>可以直接通过它们<code>共享的存储空间</code>进行通信</li>
+</ul>
+</li>
+<li><h3 id="进程与进程"><a href="#进程与进程" class="headerlink" title="进程与进程"></a>进程与进程</h3><ul>
+<li>一个进程的状态变化可能会引起另一个进程的状态变化。</li>
+<li>进程之间有可能具有<code>相关性</code>，也有可能是<code>相互独立的</code>。</li>
+<li>进程间通信的方式有<ul>
+<li>管道</li>
+<li>消息传递</li>
+<li>共享内存</li>
+<li>文件映射<ul>
+<li>利用操作系统提供的文件共享功能实现进程之间的通信。这时，也需要信号量来解决文件共享操作中的同步和互斥问题。</li>
+</ul>
+</li>
+<li>套接字</li>
+</ul>
+</li>
+<li>管道就是一种特殊的<code>共享文件</code>，受<code>文件系统</code>的管理，是一种<code>固定大小</code>的缓冲区，只存在于<code>内存</code>，大小通常为<code>内存的一页</code>，与磁盘无关（若设在磁盘中，必然会导致读写操作变慢）<ul>
+<li>用管道通信就是使用文件系统交换数据</li>
+<li>也可以使用普通文件进行数据交换</li>
+<li>管道通信只能有一个读进程，但可能有<code>多个写进程</code></li>
+</ul>
+</li>
+<li>每个进程包含<code>独立的地址空间</code>，进程各自的地址空间是<code>私有的</code>，只能执行自己地址空间中的程序，且只能访问自己地址空间中的数据，相互访问会导致指针的<code>越界错误</code>（内存管理）。<ul>
+<li>因此，进程之间不能直接交换数据，但可利用操作系统提供的<code>共享文件</code>、<code>消息传递</code>、<code>共享存储区</code>等进行通信。</li>
+</ul>
+</li>
+<li>C语言编写的进程<ul>
+<li>C语言编写的程序在使用内存时一般分为三个段</li>
+<li><code>正文段</code>（即<code>代码</code>和<code>赋值数据段</code>）、 <code>数据堆段</code>和<code>数据栈段</code>。</li>
+<li><code>二进制代码</code>和<code>常量</code>存放在正文段</li>
+<li><code>动态分配的存储区</code>在数据堆段</li>
+<li><code>临时使用的变量</code>在数据栈段</li>
+</ul>
+</li>
+<li>不能进行程序调度与切换的情况<ul>
+<li>处理中断的过程</li>
+<li>访问临界区</li>
+<li>原子操作</li>
+</ul>
+</li>
+<li>应该进行进程调度与切换的情况<ul>
+<li>分配的时间片用完</li>
+<li>进程运行结束</li>
+<li>需要等待事件的发生（如等待<code>键盘响应</code>）</li>
+<li>出错</li>
+<li>自我阻塞</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="用户级线程使用线程库实现"><a href="#用户级线程使用线程库实现" class="headerlink" title="用户级线程使用线程库实现"></a>用户级线程使用<code>线程库</code>实现</h3><ul>
+<li>由于操作系统不参与线程的调度，如果一个线程发起了<code>系统调用</code>而阻塞（操作系统分配给用户的唯一内核线程被阻塞），那进程所包含的用户线程都不能执行了。<ul>
+<li>当一个线程开始运行后，除非它主动地交出 CPU 的使用权，否则它所在的进程当中的其他线程无法运行，因为用户态的线程无法打断当前运行中的线程，它没有这个特权，只有操作系统才有，但是用户线程不是由操作系统管理的。操作系统无法感知线程。</li>
+</ul>
+</li>
+<li>在用户级线程中，系统感知不到线程的存在，调度的对象是<code>进程</code><ul>
+<li><code>跨进程的用户级线程调度</code>需要<code>内核</code>参与</li>
+</ul>
+</li>
+<li>用户级线程的调度在用户空间由程序进行<ul>
+<li>不同进程可以根据自身的需要，对自己的线程定制<code>不同的调度算法</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="内核级线程"><a href="#内核级线程" class="headerlink" title="内核级线程"></a>内核级线程</h3><ul>
+<li>由于调度的对象是线程，所以同一进程中的线程切换，也需要从用户态转到核心态进行</li>
+<li>进程中的内核级线程运行在内核态时，说明该进程也运行在内核态</li>
+<li></li>
+</ul>
+</li>
+</ul>

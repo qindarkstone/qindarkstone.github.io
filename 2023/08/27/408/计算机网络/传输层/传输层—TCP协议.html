@@ -1,0 +1,31 @@
+<hr>
+<h2 id="title-TCP协议date-2023-8-18-20-46-25tags-408-计算机网络-categories-408-计算机网络-cover-https-user-images-githubusercontent-com-81075299-261602431-dea8bb1c-a299-4deb-89b6-ebd880b00891-jpg"><a href="#title-TCP协议date-2023-8-18-20-46-25tags-408-计算机网络-categories-408-计算机网络-cover-https-user-images-githubusercontent-com-81075299-261602431-dea8bb1c-a299-4deb-89b6-ebd880b00891-jpg" class="headerlink" title="title: TCP协议date: 2023&#x2F;8&#x2F;18 20:46:25tags: [408,计算机网络]categories: [408,计算机网络]cover: https://user-images.githubusercontent.com/81075299/261602431-dea8bb1c-a299-4deb-89b6-ebd880b00891.jpg"></a>title: TCP协议<br>date: 2023&#x2F;8&#x2F;18 20:46:25<br>tags: [408,计算机网络]<br>categories: [408,计算机网络]<br>cover: <a href="https://user-images.githubusercontent.com/81075299/261602431-dea8bb1c-a299-4deb-89b6-ebd880b00891.jpg">https://user-images.githubusercontent.com/81075299/261602431-dea8bb1c-a299-4deb-89b6-ebd880b00891.jpg</a></h2><h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><ul>
+<li><h4 id="注意TCP协议面向字节流"><a href="#注意TCP协议面向字节流" class="headerlink" title="注意TCP协议面向字节流"></a>注意TCP协议面向字节流</h4><ul>
+<li><p>（0-99为100B，1-100为100B）</p>
+</li>
+<li><p>看好序号的开始和结束，序号也会占一个字节，序号为0就是一个字节，0-9就是十个字节。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="注意序号与确认号的关系，"><a href="#注意序号与确认号的关系，" class="headerlink" title="注意序号与确认号的关系，"></a>注意序号与确认号的关系，</h4><ul>
+<li>序号＋数据的有效载荷就等于确认号，确认号是上一个TCP报文的最后一个序号＋1</li>
+<li>确认号是无差错时对面下一次要发送的序号。</li>
+</ul>
+</li>
+<li><h4 id="TCP链接的释放（四次挥手）"><a href="#TCP链接的释放（四次挥手）" class="headerlink" title="TCP链接的释放（四次挥手）"></a>TCP链接的释放（四次挥手）</h4><ul>
+<li>第一个RTT，客户提出释放连接，由客户向服务器发送报文段（客户FIN置1)（进入FIN-WAIT1 终止等待1状态）；服务器进行确认（进入CLOSE-WAIT 关闭等待状态），确认数据到达后，客户机进入FIN-WAIT2 终止等待2状态。</li>
+<li>第二个RTT，服务器在等待无数据发送后，服务器向客户发送链接释放报文段（服务器FIN置1）（进入LAST-ACK 最后确认状态），客户收到报文段后，给服务器发送确认报文段，进入TIME-WAIT状态，等待两个MSL（最长报文段寿命）后，客户进入CLOSED链接关闭状态。服务器在收到客户发出的确认报文段后进入CLOSED链接关闭状态。</li>
+</ul>
+</li>
+<li><h4 id="在通信时ACK都为1，三次握手时SYN都为1"><a href="#在通信时ACK都为1，三次握手时SYN都为1" class="headerlink" title="在通信时ACK都为1，三次握手时SYN都为1"></a>在通信时ACK都为1，三次握手时SYN都为1</h4></li>
+<li><h4 id="拥塞窗口最初为1。"><a href="#拥塞窗口最初为1。" class="headerlink" title="拥塞窗口最初为1。"></a>拥塞窗口最初为1。</h4><ul>
+<li><p>即第一轮传输RTT时，传输的报文段长度为1。在第一轮RTT结束即收到确认后（第二轮RTT开始时），拥塞窗口值为2（慢开始算法），第二轮传输长度为2，第三轮传输为4……</p>
+<ul>
+<li>可知，例如在经历3个RTT后，第三个RTT传输时的拥塞窗口值为4，第三个RTT确认后（结束时）也是第四个RTT开始时，拥塞窗口值为8，第四轮传输值最大为8。</li>
+</ul>
+</li>
+<li><p>网络拥塞后，阈值降低为拥塞时拥塞窗口值的二分之一，注意拥塞时一个RTT，拥塞后在下一个RTT开始时降为1开始（慢开始）或从阈值开始（快恢复）。</p>
+</li>
+</ul>
+</li>
+</ul>
