@@ -80,7 +80,7 @@
 		</a>
 	</div>
 	<div class="kira-count">
-		<div><span>文章</span>67</div>
+		<div><span>文章</span>68</div>
 		<div><span>标签</span>10</div>
 		<div><span>分类</span>24</div>
 	</div>
@@ -247,7 +247,7 @@
             <a class="category-list-link" href="/categories/Linux/">
               Linux
             </a>
-            <span class="category-list-count">1</span>
+            <span class="category-list-count">5</span>
           </li>
         
           <li class="category-list-item">
@@ -405,7 +405,7 @@
 			
 	<div class="kira-widget-wrap">
 		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
-			<a href="/tags/408/" style="font-size: 20px;">408</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/RaspberryPi/" style="font-size: 11.67px;">RaspberryPi</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 10px;">吐槽</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 15px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.67px;">数据结构</a> <a href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" style="font-size: 13.33px;">考研数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 18.33px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 13.33px;">高等数学</a>
+			<a href="/tags/408/" style="font-size: 20px;">408</a> <a href="/tags/Linux/" style="font-size: 12.86px;">Linux</a> <a href="/tags/RaspberryPi/" style="font-size: 11.43px;">RaspberryPi</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 10px;">吐槽</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.71px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 17.14px;">数据结构</a> <a href="/tags/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/" style="font-size: 14.29px;">考研数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 18.57px;">计算机组成原理</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" style="font-size: 14.29px;">高等数学</a>
 		</div>
 		
 	</div>
@@ -503,41 +503,14 @@
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2024年03月12日</a>
-			<a><i class="kirafont icon-edit-fill"></i>230 字</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2024年03月16日</a>
+			<a><i class="kirafont icon-edit-fill"></i>60 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<h1><span id="系统管理相关">系统管理相关</span></h1><ul>
-<li>命令<ul>
-<li><code>top</code>打开任务管理器<ul>
-<li>按下<code>1</code>可展示所有CPU核心的使用情况</li>
-<li>按下<code>f</code>可以设置以哪一列进行排序或显示哪些参数</li>
-<li>按下<code>s</code>选择以哪项指标进行排序</li>
-<li>按下<code>d或space</code>进行选择</li>
-<li>按下<code>q</code>退出监控界面</li>
-</ul>
+		<h2><span id></span></h2><ul>
+<li><p>使用python3.7，默认conda和pip指令安装内容均为cpu版，需要指定好torch版本和cuda版本，在conda虚拟环境中进行安装</p>
 </li>
-<li><code>free</code>查看当前系统的内存使用情况</li>
-<li><code>lsblk</code>查看所有块设备信息，包括硬盘光驱等</li>
-<li><code>sudo fdisk -l</code>查看磁盘分区情况</li>
-<li><code>mount</code>挂载文件系统到指定的目录<ul>
-<li><code>mount [选项] 设备名 挂载点</code></li>
-<li><code>umount</code>取消挂载</li>
-</ul>
-</li>
-<li><code>df</code>查看当前磁盘使用情况</li>
-<li><code>ps</code>查看当前运行的一些进程，与top相似，但无监控功能，只能显示当前的<ul>
-<li>添加 -<code>ef</code>查看所有进程</li>
-</ul>
-</li>
-<li><code>kill -9 [进程号]</code>强制杀死进程</li>
-<li><code>shutdown</code>创建关机计划<ul>
-<li><code>-c</code>取消关机</li>
-<li><code>now</code>立即关机</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch=1.13.1 torchvision=0.14.1 torchaudio=0.13.1 cudatoolkit=10.2 -c pytorch -c nvidia</span><br></pre></td></tr></table></figure></li>
 </ul>
 
 	</article>
@@ -545,7 +518,7 @@
 	 
     <div class="kira-post-copyright">
         <strong>Author：</strong>Qin darkstone<br>
-        <strong>Link：</strong><a href="https://qindarkstone.github.io/2024/03/12/Linux/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/" title="https:&#x2F;&#x2F;qindarkstone.github.io&#x2F;2024&#x2F;03&#x2F;12&#x2F;Linux&#x2F;系统管理&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;qindarkstone.github.io&#x2F;2024&#x2F;03&#x2F;12&#x2F;Linux&#x2F;系统管理&#x2F;</a><br>
+        <strong>Link：</strong><a href="https://qindarkstone.github.io/2024/03/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/pytorch%E7%9A%84%E5%8E%86%E5%8F%B2GPU%E7%89%88%E6%9C%AC%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/" title="https:&#x2F;&#x2F;qindarkstone.github.io&#x2F;2024&#x2F;03&#x2F;16&#x2F;深度学习&#x2F;pytorch的历史GPU版本如何安装的问题&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;qindarkstone.github.io&#x2F;2024&#x2F;03&#x2F;16&#x2F;深度学习&#x2F;pytorch的历史GPU版本如何安装的问题&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
